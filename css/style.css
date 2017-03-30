@@ -1,0 +1,33 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Feb 12, 2017, 2:00:04 PM
+    Author     : Azhar Hussain
+*/
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+#define_number{
+    background-color: #204d74;
+    color: white;
+    min-height:270px;
+}
+#define_number input[type=text]{
+    color: black;
+    font-weight: bold;
+}
+#define_positive_nagetive{
+   color: black;
+   min-height:270px;
+}
+#define_result{
+   min-height:300px; 
+
+}
+#define_vowel{
+   min-height:300px; 
+   background-color:deepskyblue;
+   color: black;
+}

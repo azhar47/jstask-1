@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>JS Task-1 || CTG-52</title>
+
+        <!-- Meta Keyword For Search Engine -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- BootStrap Here -->
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+        <!-- Custom CSS Here -->
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link href="css/custom.css" rel="stylesheet" type="text/css"/>
+
+        <!-- Google Font  -->
+        <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+
+        <!-- Fav Icon -->
+        <link href="images/js1_0.png" rel="icon" type="images/png"/>
+    </head>
+    <body>
+        <section class="header-secion">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 col-lg-6">
+                        <div id="define_number" class="jumbotron">
+                            <h3>Type your number below box & Find Out is it Even or ODD Number ?</h3>
+                            <input type="text" id="scanf_define_number">
+                            <button class="btn-success" type="button" onclick="Clck();">Result</button>
+                            <h3 id="printf_define_number"></h3>
+
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-lg-6">
+                        <div id="define_positive_nagetive" class="jumbotron">
+                            <h3>Type your number below box & Find Out is it Positive or Nagetive Number ?</h3>
+                            <input type="text" id="scanf_positive_nagetive">
+                            <button type="button" onclick="Cliick();">Result</button>
+                            <h3 id="printf_positive_nagetive"></h3>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="row">
+                    <div class="col-sm-6 col-lg-6">
+                        <div id="define_result" class="jumbotron">
+                            <h2>Type your Marks below Input box and check your Letter Grade:</h2>
+                            <input type="text" id="scanf_nummber">
+                            <button type="button" onclick="Click();">Check</button>
+                            <h3 id="printf" class="text-primary"></h3>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-lg-6">
+                        <div id="define_vowel" class="jumbotron">
+                            <h2>Type your Character below Input box and check is it Vowel or Consonant?</h2>
+                            <input type="text" id="scanf_vowel">
+                            <button type="button" onclick="Clickvowel();">Check</button>
+                            <h3 id="printf_vowel" class="text-success"></h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Js Start here -->
+        <script src="js/jquery-3.1.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script type="text/javascript">
+
+                                //This Function Used for find out Even or Odd  & Start Here
+                                function Clck() {
+                                    var x = document.getElementById("scanf_define_number").value;
+                                    if (x == "") {
+                                        document.getElementById("printf_define_number").innerHTML = "Here No Input";
+                                    } else if (x % 2 == 0) {
+                                        document.getElementById("printf_define_number").innerHTML = "Even";
+                                    } else{
+                                        document.getElementById("printf_define_number").innerHTML = "ODD";
+                                    }
+                                   
+                                }   // Even or Odd Function End Here
+
+
+                                //This Function Used for find out positive_nagetive & Start Here
+                                function Cliick() {
+                                    var x = document.getElementById("scanf_positive_nagetive").value;
+                                    if (x == "") {
+                                        document.getElementById("printf_positive_nagetive").innerHTML = "No Input!";
+                                    } else if (x >= 0) {
+                                        document.getElementById("printf_positive_nagetive").innerHTML = "Positive";
+                                    } else if (x >= "a" && x<="z") {
+                                        document.getElementById("printf_positive_nagetive").innerHTML = "Invalid input";
+                                    }
+                                    else if (x >= "A" && x<="Z") {
+                                        document.getElementById("printf_positive_nagetive").innerHTML = "Invalid input";
+                                    }
+                                    else {
+                                        document.getElementById("printf_positive_nagetive").innerHTML = "Nagetive";
+                                    }
+                                }
+                                
+                                //This Function Used for find out Result  & Start Here
+                                function Click() {
+                                    var a = document.getElementById("scanf_nummber").value;
+                                    if (a == "") {
+                                        document.getElementById("printf").innerHTML = "No Input!";
+                                    } else if (a >= 80 && a <= 100) {
+                                        document.getElementById("printf").innerHTML = "A+";
+                                    } else if (a >= 70 && a <= 79) {
+                                        document.getElementById("printf").innerHTML = "A";
+                                    } else if (a >= 60 && a <= 69) {
+                                        document.getElementById("printf").innerHTML = "A-";
+                                    } else if (a >= 50 && a <= 59) {
+                                        document.getElementById("printf").innerHTML = "B";
+                                    } else if (a >= 40 && a <= 49) {
+                                        document.getElementById("printf").innerHTML = "C";
+                                    } else if (a >= 33 && a <= 39) {
+                                        document.getElementById("printf").innerHTML = "Incomplete";
+                                    } else if (a >= 0 && a <= 32) {
+                                        document.getElementById("printf").innerHTML = "F";
+                                    } else {
+                                        document.getElementById("printf").innerHTML = "Invalid input. Pleass Try Again & Make Sure that your input Value must be within (0-100)";
+                                    }
+                                }
+                                  //This Function Used for find out Vowel
+                                function Clickvowel() {
+                                    var v = document.getElementById("scanf_vowel").value;
+                                    if (v == "") {
+                                        document.getElementById("printf_vowel").innerHTML = "No Input!";
+                                    } else if (v=='a' || v=='e' || v=='i' || v=='o' || v=='u') {
+                                        document.getElementById("printf_vowel").innerHTML ="Vowel";
+                                    }
+                                    else if (v=='A' || v=='E' || v=='I' || v=='O' || v=='U') {
+                                        document.getElementById("printf_vowel").innerHTML = "Vowel";
+                                    }
+                                    
+                                    else {
+                                        document.getElementById("printf_vowel").innerHTML = "Consonant";
+                                    }
+                                }
+
+
+        </script>
+        <!-- Js End here -->
+    </body>
+</html>
